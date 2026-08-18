@@ -1,0 +1,638 @@
+string,template,gsm8k_acc,math_acc,total_accuracy
+"rank=64, alpha=64, dropout=0, batch_size=32, learning_rate=3e-05","* **Rank (r):** Controls adapter capacity by setting the low-rank dimension—higher r increases expressivity (and memory/compute) but raises overfitting risk. If you raise r, consider stronger regularization or a slightly lower learning rate.
+* **Alpha (scaling):** Scales the LoRA update; the effective update magnitude is \~**alpha / r**, so setting alpha ≈ r keeps update strength stable. Larger alpha amplifies adaptation but can destabilize training if LR is high.
+* **Batch size:** Number of samples per optimizer step—larger batches give smoother gradients and typically permit a proportionally larger learning rate (linear-scaling rule) at the cost of more memory. Small batches may need gradient accumulation or a reduced LR.
+* **Learning rate:** Step size for adapter parameters—too high can diverge (especially with large alpha/r), too low slows convergence. Tune in conjunction with batch size and consider schedules (e.g., cosine) to balance speed and stability.
+* **Dropout (LoRA dropout):** Probability of dropping the adapter path to regularize training; higher dropout curbs overfitting, especially with large r or small datasets. With higher dropout you can often afford slightly larger alpha or LR without instability.
+
+
+[Hyperparameters selection]
+rank=64
+alpha=64
+dropout=0
+batch_size=32
+learning_rate=3e-05",0.7786259541984732,0.288,106.66259541984732
+"rank=8, alpha=512, dropout=0, batch_size=32, learning_rate=3e-05","* **Rank (r):** Controls adapter capacity by setting the low-rank dimension—higher r increases expressivity (and memory/compute) but raises overfitting risk. If you raise r, consider stronger regularization or a slightly lower learning rate.
+* **Alpha (scaling):** Scales the LoRA update; the effective update magnitude is \~**alpha / r**, so setting alpha ≈ r keeps update strength stable. Larger alpha amplifies adaptation but can destabilize training if LR is high.
+* **Batch size:** Number of samples per optimizer step—larger batches give smoother gradients and typically permit a proportionally larger learning rate (linear-scaling rule) at the cost of more memory. Small batches may need gradient accumulation or a reduced LR.
+* **Learning rate:** Step size for adapter parameters—too high can diverge (especially with large alpha/r), too low slows convergence. Tune in conjunction with batch size and consider schedules (e.g., cosine) to balance speed and stability.
+* **Dropout (LoRA dropout):** Probability of dropping the adapter path to regularize training; higher dropout curbs overfitting, especially with large r or small datasets. With higher dropout you can often afford slightly larger alpha or LR without instability.
+
+
+[Hyperparameters selection]
+rank=8
+alpha=512
+dropout=0
+batch_size=32
+learning_rate=3e-05",0.8473282442748091,0.298,114.53282442748092
+"rank=1, alpha=0.5, dropout=0.05, batch_size=128, learning_rate=5e-06","* **Rank (r):** Controls adapter capacity by setting the low-rank dimension—higher r increases expressivity (and memory/compute) but raises overfitting risk. If you raise r, consider stronger regularization or a slightly lower learning rate.
+* **Alpha (scaling):** Scales the LoRA update; the effective update magnitude is \~**alpha / r**, so setting alpha ≈ r keeps update strength stable. Larger alpha amplifies adaptation but can destabilize training if LR is high.
+* **Batch size:** Number of samples per optimizer step—larger batches give smoother gradients and typically permit a proportionally larger learning rate (linear-scaling rule) at the cost of more memory. Small batches may need gradient accumulation or a reduced LR.
+* **Learning rate:** Step size for adapter parameters—too high can diverge (especially with large alpha/r), too low slows convergence. Tune in conjunction with batch size and consider schedules (e.g., cosine) to balance speed and stability.
+* **Dropout (LoRA dropout):** Probability of dropping the adapter path to regularize training; higher dropout curbs overfitting, especially with large r or small datasets. With higher dropout you can often afford slightly larger alpha or LR without instability.
+
+
+[Hyperparameters selection]
+rank=1
+alpha=0.5
+dropout=0.05
+batch_size=128
+learning_rate=5e-06",0.0,0.0,0.0
+"rank=32, alpha=32, dropout=0, batch_size=2, learning_rate=2e-05","* **Rank (r):** Controls adapter capacity by setting the low-rank dimension—higher r increases expressivity (and memory/compute) but raises overfitting risk. If you raise r, consider stronger regularization or a slightly lower learning rate.
+* **Alpha (scaling):** Scales the LoRA update; the effective update magnitude is \~**alpha / r**, so setting alpha ≈ r keeps update strength stable. Larger alpha amplifies adaptation but can destabilize training if LR is high.
+* **Batch size:** Number of samples per optimizer step—larger batches give smoother gradients and typically permit a proportionally larger learning rate (linear-scaling rule) at the cost of more memory. Small batches may need gradient accumulation or a reduced LR.
+* **Learning rate:** Step size for adapter parameters—too high can diverge (especially with large alpha/r), too low slows convergence. Tune in conjunction with batch size and consider schedules (e.g., cosine) to balance speed and stability.
+* **Dropout (LoRA dropout):** Probability of dropping the adapter path to regularize training; higher dropout curbs overfitting, especially with large r or small datasets. With higher dropout you can often afford slightly larger alpha or LR without instability.
+
+
+[Hyperparameters selection]
+rank=32
+alpha=32
+dropout=0
+batch_size=2
+learning_rate=2e-05",0.7938931297709924,0.274,106.78931297709924
+"rank=32, alpha=16.0, dropout=0.1, batch_size=8, learning_rate=3e-05","* **Rank (r):** Controls adapter capacity by setting the low-rank dimension—higher r increases expressivity (and memory/compute) but raises overfitting risk. If you raise r, consider stronger regularization or a slightly lower learning rate.
+* **Alpha (scaling):** Scales the LoRA update; the effective update magnitude is \~**alpha / r**, so setting alpha ≈ r keeps update strength stable. Larger alpha amplifies adaptation but can destabilize training if LR is high.
+* **Batch size:** Number of samples per optimizer step—larger batches give smoother gradients and typically permit a proportionally larger learning rate (linear-scaling rule) at the cost of more memory. Small batches may need gradient accumulation or a reduced LR.
+* **Learning rate:** Step size for adapter parameters—too high can diverge (especially with large alpha/r), too low slows convergence. Tune in conjunction with batch size and consider schedules (e.g., cosine) to balance speed and stability.
+* **Dropout (LoRA dropout):** Probability of dropping the adapter path to regularize training; higher dropout curbs overfitting, especially with large r or small datasets. With higher dropout you can often afford slightly larger alpha or LR without instability.
+
+
+[Hyperparameters selection]
+rank=32
+alpha=16.0
+dropout=0.1
+batch_size=8
+learning_rate=3e-05",0.8015267175572519,0.28,108.1526717557252
+"rank=4, alpha=16, dropout=0.1, batch_size=8, learning_rate=2e-05","* **Rank (r):** Controls adapter capacity by setting the low-rank dimension—higher r increases expressivity (and memory/compute) but raises overfitting risk. If you raise r, consider stronger regularization or a slightly lower learning rate.
+* **Alpha (scaling):** Scales the LoRA update; the effective update magnitude is \~**alpha / r**, so setting alpha ≈ r keeps update strength stable. Larger alpha amplifies adaptation but can destabilize training if LR is high.
+* **Batch size:** Number of samples per optimizer step—larger batches give smoother gradients and typically permit a proportionally larger learning rate (linear-scaling rule) at the cost of more memory. Small batches may need gradient accumulation or a reduced LR.
+* **Learning rate:** Step size for adapter parameters—too high can diverge (especially with large alpha/r), too low slows convergence. Tune in conjunction with batch size and consider schedules (e.g., cosine) to balance speed and stability.
+* **Dropout (LoRA dropout):** Probability of dropping the adapter path to regularize training; higher dropout curbs overfitting, especially with large r or small datasets. With higher dropout you can often afford slightly larger alpha or LR without instability.
+
+
+[Hyperparameters selection]
+rank=4
+alpha=16
+dropout=0.1
+batch_size=8
+learning_rate=2e-05",0.7709923664122137,0.3,107.09923664122137
+"rank=8, alpha=64, dropout=0, batch_size=64, learning_rate=5e-05","* **Rank (r):** Controls adapter capacity by setting the low-rank dimension—higher r increases expressivity (and memory/compute) but raises overfitting risk. If you raise r, consider stronger regularization or a slightly lower learning rate.
+* **Alpha (scaling):** Scales the LoRA update; the effective update magnitude is \~**alpha / r**, so setting alpha ≈ r keeps update strength stable. Larger alpha amplifies adaptation but can destabilize training if LR is high.
+* **Batch size:** Number of samples per optimizer step—larger batches give smoother gradients and typically permit a proportionally larger learning rate (linear-scaling rule) at the cost of more memory. Small batches may need gradient accumulation or a reduced LR.
+* **Learning rate:** Step size for adapter parameters—too high can diverge (especially with large alpha/r), too low slows convergence. Tune in conjunction with batch size and consider schedules (e.g., cosine) to balance speed and stability.
+* **Dropout (LoRA dropout):** Probability of dropping the adapter path to regularize training; higher dropout curbs overfitting, especially with large r or small datasets. With higher dropout you can often afford slightly larger alpha or LR without instability.
+
+
+[Hyperparameters selection]
+rank=8
+alpha=64
+dropout=0
+batch_size=64
+learning_rate=5e-05",0.7862595419847328,0.294,108.02595419847329
+"rank=2, alpha=32, dropout=0.2, batch_size=2, learning_rate=5e-05","* **Rank (r):** Controls adapter capacity by setting the low-rank dimension—higher r increases expressivity (and memory/compute) but raises overfitting risk. If you raise r, consider stronger regularization or a slightly lower learning rate.
+* **Alpha (scaling):** Scales the LoRA update; the effective update magnitude is \~**alpha / r**, so setting alpha ≈ r keeps update strength stable. Larger alpha amplifies adaptation but can destabilize training if LR is high.
+* **Batch size:** Number of samples per optimizer step—larger batches give smoother gradients and typically permit a proportionally larger learning rate (linear-scaling rule) at the cost of more memory. Small batches may need gradient accumulation or a reduced LR.
+* **Learning rate:** Step size for adapter parameters—too high can diverge (especially with large alpha/r), too low slows convergence. Tune in conjunction with batch size and consider schedules (e.g., cosine) to balance speed and stability.
+* **Dropout (LoRA dropout):** Probability of dropping the adapter path to regularize training; higher dropout curbs overfitting, especially with large r or small datasets. With higher dropout you can often afford slightly larger alpha or LR without instability.
+
+
+[Hyperparameters selection]
+rank=2
+alpha=32
+dropout=0.2
+batch_size=2
+learning_rate=5e-05",0.8091603053435115,0.286,109.51603053435116
+"rank=1, alpha=1, dropout=0.15, batch_size=64, learning_rate=2e-05","* **Rank (r):** Controls adapter capacity by setting the low-rank dimension—higher r increases expressivity (and memory/compute) but raises overfitting risk. If you raise r, consider stronger regularization or a slightly lower learning rate.
+* **Alpha (scaling):** Scales the LoRA update; the effective update magnitude is \~**alpha / r**, so setting alpha ≈ r keeps update strength stable. Larger alpha amplifies adaptation but can destabilize training if LR is high.
+* **Batch size:** Number of samples per optimizer step—larger batches give smoother gradients and typically permit a proportionally larger learning rate (linear-scaling rule) at the cost of more memory. Small batches may need gradient accumulation or a reduced LR.
+* **Learning rate:** Step size for adapter parameters—too high can diverge (especially with large alpha/r), too low slows convergence. Tune in conjunction with batch size and consider schedules (e.g., cosine) to balance speed and stability.
+* **Dropout (LoRA dropout):** Probability of dropping the adapter path to regularize training; higher dropout curbs overfitting, especially with large r or small datasets. With higher dropout you can often afford slightly larger alpha or LR without instability.
+
+
+[Hyperparameters selection]
+rank=1
+alpha=1
+dropout=0.15
+batch_size=64
+learning_rate=2e-05",0.0,0.0,0.0
+"rank=8, alpha=32, dropout=0, batch_size=8, learning_rate=5e-05","* **Rank (r):** Controls adapter capacity by setting the low-rank dimension—higher r increases expressivity (and memory/compute) but raises overfitting risk. If you raise r, consider stronger regularization or a slightly lower learning rate.
+* **Alpha (scaling):** Scales the LoRA update; the effective update magnitude is \~**alpha / r**, so setting alpha ≈ r keeps update strength stable. Larger alpha amplifies adaptation but can destabilize training if LR is high.
+* **Batch size:** Number of samples per optimizer step—larger batches give smoother gradients and typically permit a proportionally larger learning rate (linear-scaling rule) at the cost of more memory. Small batches may need gradient accumulation or a reduced LR.
+* **Learning rate:** Step size for adapter parameters—too high can diverge (especially with large alpha/r), too low slows convergence. Tune in conjunction with batch size and consider schedules (e.g., cosine) to balance speed and stability.
+* **Dropout (LoRA dropout):** Probability of dropping the adapter path to regularize training; higher dropout curbs overfitting, especially with large r or small datasets. With higher dropout you can often afford slightly larger alpha or LR without instability.
+
+
+[Hyperparameters selection]
+rank=8
+alpha=32
+dropout=0
+batch_size=8
+learning_rate=5e-05",0.8244274809160306,0.28,110.44274809160306
+"rank=8, alpha=16, dropout=0.2, batch_size=8, learning_rate=5e-05","* **Rank (r):** Controls adapter capacity by setting the low-rank dimension—higher r increases expressivity (and memory/compute) but raises overfitting risk. If you raise r, consider stronger regularization or a slightly lower learning rate.
+* **Alpha (scaling):** Scales the LoRA update; the effective update magnitude is \~**alpha / r**, so setting alpha ≈ r keeps update strength stable. Larger alpha amplifies adaptation but can destabilize training if LR is high.
+* **Batch size:** Number of samples per optimizer step—larger batches give smoother gradients and typically permit a proportionally larger learning rate (linear-scaling rule) at the cost of more memory. Small batches may need gradient accumulation or a reduced LR.
+* **Learning rate:** Step size for adapter parameters—too high can diverge (especially with large alpha/r), too low slows convergence. Tune in conjunction with batch size and consider schedules (e.g., cosine) to balance speed and stability.
+* **Dropout (LoRA dropout):** Probability of dropping the adapter path to regularize training; higher dropout curbs overfitting, especially with large r or small datasets. With higher dropout you can often afford slightly larger alpha or LR without instability.
+
+
+[Hyperparameters selection]
+rank=8
+alpha=16
+dropout=0.2
+batch_size=8
+learning_rate=5e-05",0.7786259541984732,0.29,106.86259541984732
+"rank=4, alpha=2.0, dropout=0, batch_size=2, learning_rate=3e-05","* **Rank (r):** Controls adapter capacity by setting the low-rank dimension—higher r increases expressivity (and memory/compute) but raises overfitting risk. If you raise r, consider stronger regularization or a slightly lower learning rate.
+* **Alpha (scaling):** Scales the LoRA update; the effective update magnitude is \~**alpha / r**, so setting alpha ≈ r keeps update strength stable. Larger alpha amplifies adaptation but can destabilize training if LR is high.
+* **Batch size:** Number of samples per optimizer step—larger batches give smoother gradients and typically permit a proportionally larger learning rate (linear-scaling rule) at the cost of more memory. Small batches may need gradient accumulation or a reduced LR.
+* **Learning rate:** Step size for adapter parameters—too high can diverge (especially with large alpha/r), too low slows convergence. Tune in conjunction with batch size and consider schedules (e.g., cosine) to balance speed and stability.
+* **Dropout (LoRA dropout):** Probability of dropping the adapter path to regularize training; higher dropout curbs overfitting, especially with large r or small datasets. With higher dropout you can often afford slightly larger alpha or LR without instability.
+
+
+[Hyperparameters selection]
+rank=4
+alpha=2.0
+dropout=0
+batch_size=2
+learning_rate=3e-05",0.8320610687022901,0.272,110.40610687022902
+"rank=4, alpha=256, dropout=0, batch_size=32, learning_rate=5e-05","* **Rank (r):** Controls adapter capacity by setting the low-rank dimension—higher r increases expressivity (and memory/compute) but raises overfitting risk. If you raise r, consider stronger regularization or a slightly lower learning rate.
+* **Alpha (scaling):** Scales the LoRA update; the effective update magnitude is \~**alpha / r**, so setting alpha ≈ r keeps update strength stable. Larger alpha amplifies adaptation but can destabilize training if LR is high.
+* **Batch size:** Number of samples per optimizer step—larger batches give smoother gradients and typically permit a proportionally larger learning rate (linear-scaling rule) at the cost of more memory. Small batches may need gradient accumulation or a reduced LR.
+* **Learning rate:** Step size for adapter parameters—too high can diverge (especially with large alpha/r), too low slows convergence. Tune in conjunction with batch size and consider schedules (e.g., cosine) to balance speed and stability.
+* **Dropout (LoRA dropout):** Probability of dropping the adapter path to regularize training; higher dropout curbs overfitting, especially with large r or small datasets. With higher dropout you can often afford slightly larger alpha or LR without instability.
+
+
+[Hyperparameters selection]
+rank=4
+alpha=256
+dropout=0
+batch_size=32
+learning_rate=5e-05",0.8244274809160306,0.296,112.04274809160306
+"rank=32, alpha=32, dropout=0, batch_size=32, learning_rate=3e-05","* **Rank (r):** Controls adapter capacity by setting the low-rank dimension—higher r increases expressivity (and memory/compute) but raises overfitting risk. If you raise r, consider stronger regularization or a slightly lower learning rate.
+* **Alpha (scaling):** Scales the LoRA update; the effective update magnitude is \~**alpha / r**, so setting alpha ≈ r keeps update strength stable. Larger alpha amplifies adaptation but can destabilize training if LR is high.
+* **Batch size:** Number of samples per optimizer step—larger batches give smoother gradients and typically permit a proportionally larger learning rate (linear-scaling rule) at the cost of more memory. Small batches may need gradient accumulation or a reduced LR.
+* **Learning rate:** Step size for adapter parameters—too high can diverge (especially with large alpha/r), too low slows convergence. Tune in conjunction with batch size and consider schedules (e.g., cosine) to balance speed and stability.
+* **Dropout (LoRA dropout):** Probability of dropping the adapter path to regularize training; higher dropout curbs overfitting, especially with large r or small datasets. With higher dropout you can often afford slightly larger alpha or LR without instability.
+
+
+[Hyperparameters selection]
+rank=32
+alpha=32
+dropout=0
+batch_size=32
+learning_rate=3e-05",0.7938931297709924,0.25,104.38931297709924
+"rank=8, alpha=64, dropout=0.1, batch_size=2, learning_rate=5e-05","* **Rank (r):** Controls adapter capacity by setting the low-rank dimension—higher r increases expressivity (and memory/compute) but raises overfitting risk. If you raise r, consider stronger regularization or a slightly lower learning rate.
+* **Alpha (scaling):** Scales the LoRA update; the effective update magnitude is \~**alpha / r**, so setting alpha ≈ r keeps update strength stable. Larger alpha amplifies adaptation but can destabilize training if LR is high.
+* **Batch size:** Number of samples per optimizer step—larger batches give smoother gradients and typically permit a proportionally larger learning rate (linear-scaling rule) at the cost of more memory. Small batches may need gradient accumulation or a reduced LR.
+* **Learning rate:** Step size for adapter parameters—too high can diverge (especially with large alpha/r), too low slows convergence. Tune in conjunction with batch size and consider schedules (e.g., cosine) to balance speed and stability.
+* **Dropout (LoRA dropout):** Probability of dropping the adapter path to regularize training; higher dropout curbs overfitting, especially with large r or small datasets. With higher dropout you can often afford slightly larger alpha or LR without instability.
+
+
+[Hyperparameters selection]
+rank=8
+alpha=64
+dropout=0.1
+batch_size=2
+learning_rate=5e-05",0.8702290076335878,0.28,115.0229007633588
+"rank=4, alpha=256, dropout=0, batch_size=2, learning_rate=5e-05","* **Rank (r):** Controls adapter capacity by setting the low-rank dimension—higher r increases expressivity (and memory/compute) but raises overfitting risk. If you raise r, consider stronger regularization or a slightly lower learning rate.
+* **Alpha (scaling):** Scales the LoRA update; the effective update magnitude is \~**alpha / r**, so setting alpha ≈ r keeps update strength stable. Larger alpha amplifies adaptation but can destabilize training if LR is high.
+* **Batch size:** Number of samples per optimizer step—larger batches give smoother gradients and typically permit a proportionally larger learning rate (linear-scaling rule) at the cost of more memory. Small batches may need gradient accumulation or a reduced LR.
+* **Learning rate:** Step size for adapter parameters—too high can diverge (especially with large alpha/r), too low slows convergence. Tune in conjunction with batch size and consider schedules (e.g., cosine) to balance speed and stability.
+* **Dropout (LoRA dropout):** Probability of dropping the adapter path to regularize training; higher dropout curbs overfitting, especially with large r or small datasets. With higher dropout you can often afford slightly larger alpha or LR without instability.
+
+
+[Hyperparameters selection]
+rank=4
+alpha=256
+dropout=0
+batch_size=2
+learning_rate=5e-05",0.7938931297709924,0.278,107.18931297709923
+"rank=8, alpha=16, dropout=0, batch_size=32, learning_rate=3e-05","* **Rank (r):** Controls adapter capacity by setting the low-rank dimension—higher r increases expressivity (and memory/compute) but raises overfitting risk. If you raise r, consider stronger regularization or a slightly lower learning rate.
+* **Alpha (scaling):** Scales the LoRA update; the effective update magnitude is \~**alpha / r**, so setting alpha ≈ r keeps update strength stable. Larger alpha amplifies adaptation but can destabilize training if LR is high.
+* **Batch size:** Number of samples per optimizer step—larger batches give smoother gradients and typically permit a proportionally larger learning rate (linear-scaling rule) at the cost of more memory. Small batches may need gradient accumulation or a reduced LR.
+* **Learning rate:** Step size for adapter parameters—too high can diverge (especially with large alpha/r), too low slows convergence. Tune in conjunction with batch size and consider schedules (e.g., cosine) to balance speed and stability.
+* **Dropout (LoRA dropout):** Probability of dropping the adapter path to regularize training; higher dropout curbs overfitting, especially with large r or small datasets. With higher dropout you can often afford slightly larger alpha or LR without instability.
+
+
+[Hyperparameters selection]
+rank=8
+alpha=16
+dropout=0
+batch_size=32
+learning_rate=3e-05",0.816793893129771,0.248,106.47938931297708
+"rank=8, alpha=512, dropout=0, batch_size=16, learning_rate=2e-05","* **Rank (r):** Controls adapter capacity by setting the low-rank dimension—higher r increases expressivity (and memory/compute) but raises overfitting risk. If you raise r, consider stronger regularization or a slightly lower learning rate.
+* **Alpha (scaling):** Scales the LoRA update; the effective update magnitude is \~**alpha / r**, so setting alpha ≈ r keeps update strength stable. Larger alpha amplifies adaptation but can destabilize training if LR is high.
+* **Batch size:** Number of samples per optimizer step—larger batches give smoother gradients and typically permit a proportionally larger learning rate (linear-scaling rule) at the cost of more memory. Small batches may need gradient accumulation or a reduced LR.
+* **Learning rate:** Step size for adapter parameters—too high can diverge (especially with large alpha/r), too low slows convergence. Tune in conjunction with batch size and consider schedules (e.g., cosine) to balance speed and stability.
+* **Dropout (LoRA dropout):** Probability of dropping the adapter path to regularize training; higher dropout curbs overfitting, especially with large r or small datasets. With higher dropout you can often afford slightly larger alpha or LR without instability.
+
+
+[Hyperparameters selection]
+rank=8
+alpha=512
+dropout=0
+batch_size=16
+learning_rate=2e-05",0.8015267175572519,0.288,108.95267175572518
+"rank=1, alpha=1, dropout=0.15, batch_size=64, learning_rate=0.0001","* **Rank (r):** Controls adapter capacity by setting the low-rank dimension—higher r increases expressivity (and memory/compute) but raises overfitting risk. If you raise r, consider stronger regularization or a slightly lower learning rate.
+* **Alpha (scaling):** Scales the LoRA update; the effective update magnitude is \~**alpha / r**, so setting alpha ≈ r keeps update strength stable. Larger alpha amplifies adaptation but can destabilize training if LR is high.
+* **Batch size:** Number of samples per optimizer step—larger batches give smoother gradients and typically permit a proportionally larger learning rate (linear-scaling rule) at the cost of more memory. Small batches may need gradient accumulation or a reduced LR.
+* **Learning rate:** Step size for adapter parameters—too high can diverge (especially with large alpha/r), too low slows convergence. Tune in conjunction with batch size and consider schedules (e.g., cosine) to balance speed and stability.
+* **Dropout (LoRA dropout):** Probability of dropping the adapter path to regularize training; higher dropout curbs overfitting, especially with large r or small datasets. With higher dropout you can often afford slightly larger alpha or LR without instability.
+
+
+[Hyperparameters selection]
+rank=1
+alpha=1
+dropout=0.15
+batch_size=64
+learning_rate=0.0001",0.8015267175572519,0.26,106.1526717557252
+"rank=256, alpha=32768, dropout=0.25, batch_size=8, learning_rate=5e-05","* **Rank (r):** Controls adapter capacity by setting the low-rank dimension—higher r increases expressivity (and memory/compute) but raises overfitting risk. If you raise r, consider stronger regularization or a slightly lower learning rate.
+* **Alpha (scaling):** Scales the LoRA update; the effective update magnitude is \~**alpha / r**, so setting alpha ≈ r keeps update strength stable. Larger alpha amplifies adaptation but can destabilize training if LR is high.
+* **Batch size:** Number of samples per optimizer step—larger batches give smoother gradients and typically permit a proportionally larger learning rate (linear-scaling rule) at the cost of more memory. Small batches may need gradient accumulation or a reduced LR.
+* **Learning rate:** Step size for adapter parameters—too high can diverge (especially with large alpha/r), too low slows convergence. Tune in conjunction with batch size and consider schedules (e.g., cosine) to balance speed and stability.
+* **Dropout (LoRA dropout):** Probability of dropping the adapter path to regularize training; higher dropout curbs overfitting, especially with large r or small datasets. With higher dropout you can often afford slightly larger alpha or LR without instability.
+
+
+[Hyperparameters selection]
+rank=256
+alpha=32768
+dropout=0.25
+batch_size=8
+learning_rate=5e-05",0.0,0.004,0.4
+"rank=8, alpha=32, dropout=0.1, batch_size=128, learning_rate=0.0001","* **Rank (r):** Controls adapter capacity by setting the low-rank dimension—higher r increases expressivity (and memory/compute) but raises overfitting risk. If you raise r, consider stronger regularization or a slightly lower learning rate.
+* **Alpha (scaling):** Scales the LoRA update; the effective update magnitude is \~**alpha / r**, so setting alpha ≈ r keeps update strength stable. Larger alpha amplifies adaptation but can destabilize training if LR is high.
+* **Batch size:** Number of samples per optimizer step—larger batches give smoother gradients and typically permit a proportionally larger learning rate (linear-scaling rule) at the cost of more memory. Small batches may need gradient accumulation or a reduced LR.
+* **Learning rate:** Step size for adapter parameters—too high can diverge (especially with large alpha/r), too low slows convergence. Tune in conjunction with batch size and consider schedules (e.g., cosine) to balance speed and stability.
+* **Dropout (LoRA dropout):** Probability of dropping the adapter path to regularize training; higher dropout curbs overfitting, especially with large r or small datasets. With higher dropout you can often afford slightly larger alpha or LR without instability.
+
+
+[Hyperparameters selection]
+rank=8
+alpha=32
+dropout=0.1
+batch_size=128
+learning_rate=0.0001",0.7633587786259542,0.3,106.33587786259542
+"rank=4, alpha=8, dropout=0.15, batch_size=4, learning_rate=0.0001","* **Rank (r):** Controls adapter capacity by setting the low-rank dimension—higher r increases expressivity (and memory/compute) but raises overfitting risk. If you raise r, consider stronger regularization or a slightly lower learning rate.
+* **Alpha (scaling):** Scales the LoRA update; the effective update magnitude is \~**alpha / r**, so setting alpha ≈ r keeps update strength stable. Larger alpha amplifies adaptation but can destabilize training if LR is high.
+* **Batch size:** Number of samples per optimizer step—larger batches give smoother gradients and typically permit a proportionally larger learning rate (linear-scaling rule) at the cost of more memory. Small batches may need gradient accumulation or a reduced LR.
+* **Learning rate:** Step size for adapter parameters—too high can diverge (especially with large alpha/r), too low slows convergence. Tune in conjunction with batch size and consider schedules (e.g., cosine) to balance speed and stability.
+* **Dropout (LoRA dropout):** Probability of dropping the adapter path to regularize training; higher dropout curbs overfitting, especially with large r or small datasets. With higher dropout you can often afford slightly larger alpha or LR without instability.
+
+
+[Hyperparameters selection]
+rank=4
+alpha=8
+dropout=0.15
+batch_size=4
+learning_rate=0.0001",0.816793893129771,0.276,109.27938931297707
+"rank=1, alpha=0.5, dropout=0.1, batch_size=2, learning_rate=0.0001","* **Rank (r):** Controls adapter capacity by setting the low-rank dimension—higher r increases expressivity (and memory/compute) but raises overfitting risk. If you raise r, consider stronger regularization or a slightly lower learning rate.
+* **Alpha (scaling):** Scales the LoRA update; the effective update magnitude is \~**alpha / r**, so setting alpha ≈ r keeps update strength stable. Larger alpha amplifies adaptation but can destabilize training if LR is high.
+* **Batch size:** Number of samples per optimizer step—larger batches give smoother gradients and typically permit a proportionally larger learning rate (linear-scaling rule) at the cost of more memory. Small batches may need gradient accumulation or a reduced LR.
+* **Learning rate:** Step size for adapter parameters—too high can diverge (especially with large alpha/r), too low slows convergence. Tune in conjunction with batch size and consider schedules (e.g., cosine) to balance speed and stability.
+* **Dropout (LoRA dropout):** Probability of dropping the adapter path to regularize training; higher dropout curbs overfitting, especially with large r or small datasets. With higher dropout you can often afford slightly larger alpha or LR without instability.
+
+
+[Hyperparameters selection]
+rank=1
+alpha=0.5
+dropout=0.1
+batch_size=2
+learning_rate=0.0001",0.0,0.0,0.0
+"rank=128, alpha=512, dropout=0.15, batch_size=256, learning_rate=0.0001","* **Rank (r):** Controls adapter capacity by setting the low-rank dimension—higher r increases expressivity (and memory/compute) but raises overfitting risk. If you raise r, consider stronger regularization or a slightly lower learning rate.
+* **Alpha (scaling):** Scales the LoRA update; the effective update magnitude is \~**alpha / r**, so setting alpha ≈ r keeps update strength stable. Larger alpha amplifies adaptation but can destabilize training if LR is high.
+* **Batch size:** Number of samples per optimizer step—larger batches give smoother gradients and typically permit a proportionally larger learning rate (linear-scaling rule) at the cost of more memory. Small batches may need gradient accumulation or a reduced LR.
+* **Learning rate:** Step size for adapter parameters—too high can diverge (especially with large alpha/r), too low slows convergence. Tune in conjunction with batch size and consider schedules (e.g., cosine) to balance speed and stability.
+* **Dropout (LoRA dropout):** Probability of dropping the adapter path to regularize training; higher dropout curbs overfitting, especially with large r or small datasets. With higher dropout you can often afford slightly larger alpha or LR without instability.
+
+
+[Hyperparameters selection]
+rank=128
+alpha=512
+dropout=0.15
+batch_size=256
+learning_rate=0.0001",0.7786259541984732,0.29,106.86259541984732
+"rank=8, alpha=128, dropout=0, batch_size=128, learning_rate=0.0001","* **Rank (r):** Controls adapter capacity by setting the low-rank dimension—higher r increases expressivity (and memory/compute) but raises overfitting risk. If you raise r, consider stronger regularization or a slightly lower learning rate.
+* **Alpha (scaling):** Scales the LoRA update; the effective update magnitude is \~**alpha / r**, so setting alpha ≈ r keeps update strength stable. Larger alpha amplifies adaptation but can destabilize training if LR is high.
+* **Batch size:** Number of samples per optimizer step—larger batches give smoother gradients and typically permit a proportionally larger learning rate (linear-scaling rule) at the cost of more memory. Small batches may need gradient accumulation or a reduced LR.
+* **Learning rate:** Step size for adapter parameters—too high can diverge (especially with large alpha/r), too low slows convergence. Tune in conjunction with batch size and consider schedules (e.g., cosine) to balance speed and stability.
+* **Dropout (LoRA dropout):** Probability of dropping the adapter path to regularize training; higher dropout curbs overfitting, especially with large r or small datasets. With higher dropout you can often afford slightly larger alpha or LR without instability.
+
+
+[Hyperparameters selection]
+rank=8
+alpha=128
+dropout=0
+batch_size=128
+learning_rate=0.0001",0.7709923664122137,0.296,106.69923664122136
+"rank=2, alpha=1.0, dropout=0.3, batch_size=16, learning_rate=0.0001","* **Rank (r):** Controls adapter capacity by setting the low-rank dimension—higher r increases expressivity (and memory/compute) but raises overfitting risk. If you raise r, consider stronger regularization or a slightly lower learning rate.
+* **Alpha (scaling):** Scales the LoRA update; the effective update magnitude is \~**alpha / r**, so setting alpha ≈ r keeps update strength stable. Larger alpha amplifies adaptation but can destabilize training if LR is high.
+* **Batch size:** Number of samples per optimizer step—larger batches give smoother gradients and typically permit a proportionally larger learning rate (linear-scaling rule) at the cost of more memory. Small batches may need gradient accumulation or a reduced LR.
+* **Learning rate:** Step size for adapter parameters—too high can diverge (especially with large alpha/r), too low slows convergence. Tune in conjunction with batch size and consider schedules (e.g., cosine) to balance speed and stability.
+* **Dropout (LoRA dropout):** Probability of dropping the adapter path to regularize training; higher dropout curbs overfitting, especially with large r or small datasets. With higher dropout you can often afford slightly larger alpha or LR without instability.
+
+
+[Hyperparameters selection]
+rank=2
+alpha=1.0
+dropout=0.3
+batch_size=16
+learning_rate=0.0001",0.8244274809160306,0.274,109.84274809160306
+"rank=128, alpha=128, dropout=0.1, batch_size=64, learning_rate=0.0001","* **Rank (r):** Controls adapter capacity by setting the low-rank dimension—higher r increases expressivity (and memory/compute) but raises overfitting risk. If you raise r, consider stronger regularization or a slightly lower learning rate.
+* **Alpha (scaling):** Scales the LoRA update; the effective update magnitude is \~**alpha / r**, so setting alpha ≈ r keeps update strength stable. Larger alpha amplifies adaptation but can destabilize training if LR is high.
+* **Batch size:** Number of samples per optimizer step—larger batches give smoother gradients and typically permit a proportionally larger learning rate (linear-scaling rule) at the cost of more memory. Small batches may need gradient accumulation or a reduced LR.
+* **Learning rate:** Step size for adapter parameters—too high can diverge (especially with large alpha/r), too low slows convergence. Tune in conjunction with batch size and consider schedules (e.g., cosine) to balance speed and stability.
+* **Dropout (LoRA dropout):** Probability of dropping the adapter path to regularize training; higher dropout curbs overfitting, especially with large r or small datasets. With higher dropout you can often afford slightly larger alpha or LR without instability.
+
+
+[Hyperparameters selection]
+rank=128
+alpha=128
+dropout=0.1
+batch_size=64
+learning_rate=0.0001",0.7633587786259542,0.288,105.13587786259542
+"rank=4, alpha=512, dropout=0.1, batch_size=64, learning_rate=0.0001","* **Rank (r):** Controls adapter capacity by setting the low-rank dimension—higher r increases expressivity (and memory/compute) but raises overfitting risk. If you raise r, consider stronger regularization or a slightly lower learning rate.
+* **Alpha (scaling):** Scales the LoRA update; the effective update magnitude is \~**alpha / r**, so setting alpha ≈ r keeps update strength stable. Larger alpha amplifies adaptation but can destabilize training if LR is high.
+* **Batch size:** Number of samples per optimizer step—larger batches give smoother gradients and typically permit a proportionally larger learning rate (linear-scaling rule) at the cost of more memory. Small batches may need gradient accumulation or a reduced LR.
+* **Learning rate:** Step size for adapter parameters—too high can diverge (especially with large alpha/r), too low slows convergence. Tune in conjunction with batch size and consider schedules (e.g., cosine) to balance speed and stability.
+* **Dropout (LoRA dropout):** Probability of dropping the adapter path to regularize training; higher dropout curbs overfitting, especially with large r or small datasets. With higher dropout you can often afford slightly larger alpha or LR without instability.
+
+
+[Hyperparameters selection]
+rank=4
+alpha=512
+dropout=0.1
+batch_size=64
+learning_rate=0.0001",0.8091603053435115,0.286,109.51603053435116
+"rank=4, alpha=256, dropout=0, batch_size=2, learning_rate=0.0001","* **Rank (r):** Controls adapter capacity by setting the low-rank dimension—higher r increases expressivity (and memory/compute) but raises overfitting risk. If you raise r, consider stronger regularization or a slightly lower learning rate.
+* **Alpha (scaling):** Scales the LoRA update; the effective update magnitude is \~**alpha / r**, so setting alpha ≈ r keeps update strength stable. Larger alpha amplifies adaptation but can destabilize training if LR is high.
+* **Batch size:** Number of samples per optimizer step—larger batches give smoother gradients and typically permit a proportionally larger learning rate (linear-scaling rule) at the cost of more memory. Small batches may need gradient accumulation or a reduced LR.
+* **Learning rate:** Step size for adapter parameters—too high can diverge (especially with large alpha/r), too low slows convergence. Tune in conjunction with batch size and consider schedules (e.g., cosine) to balance speed and stability.
+* **Dropout (LoRA dropout):** Probability of dropping the adapter path to regularize training; higher dropout curbs overfitting, especially with large r or small datasets. With higher dropout you can often afford slightly larger alpha or LR without instability.
+
+
+[Hyperparameters selection]
+rank=4
+alpha=256
+dropout=0
+batch_size=2
+learning_rate=0.0001",0.7633587786259542,0.268,103.13587786259544
+"rank=8, alpha=4.0, dropout=0.05, batch_size=128, learning_rate=0.0001","* **Rank (r):** Controls adapter capacity by setting the low-rank dimension—higher r increases expressivity (and memory/compute) but raises overfitting risk. If you raise r, consider stronger regularization or a slightly lower learning rate.
+* **Alpha (scaling):** Scales the LoRA update; the effective update magnitude is \~**alpha / r**, so setting alpha ≈ r keeps update strength stable. Larger alpha amplifies adaptation but can destabilize training if LR is high.
+* **Batch size:** Number of samples per optimizer step—larger batches give smoother gradients and typically permit a proportionally larger learning rate (linear-scaling rule) at the cost of more memory. Small batches may need gradient accumulation or a reduced LR.
+* **Learning rate:** Step size for adapter parameters—too high can diverge (especially with large alpha/r), too low slows convergence. Tune in conjunction with batch size and consider schedules (e.g., cosine) to balance speed and stability.
+* **Dropout (LoRA dropout):** Probability of dropping the adapter path to regularize training; higher dropout curbs overfitting, especially with large r or small datasets. With higher dropout you can often afford slightly larger alpha or LR without instability.
+
+
+[Hyperparameters selection]
+rank=8
+alpha=4.0
+dropout=0.05
+batch_size=128
+learning_rate=0.0001",0.7862595419847328,0.284,107.02595419847329
+"rank=32, alpha=64, dropout=0.1, batch_size=2, learning_rate=0.0001","* **Rank (r):** Controls adapter capacity by setting the low-rank dimension—higher r increases expressivity (and memory/compute) but raises overfitting risk. If you raise r, consider stronger regularization or a slightly lower learning rate.
+* **Alpha (scaling):** Scales the LoRA update; the effective update magnitude is \~**alpha / r**, so setting alpha ≈ r keeps update strength stable. Larger alpha amplifies adaptation but can destabilize training if LR is high.
+* **Batch size:** Number of samples per optimizer step—larger batches give smoother gradients and typically permit a proportionally larger learning rate (linear-scaling rule) at the cost of more memory. Small batches may need gradient accumulation or a reduced LR.
+* **Learning rate:** Step size for adapter parameters—too high can diverge (especially with large alpha/r), too low slows convergence. Tune in conjunction with batch size and consider schedules (e.g., cosine) to balance speed and stability.
+* **Dropout (LoRA dropout):** Probability of dropping the adapter path to regularize training; higher dropout curbs overfitting, especially with large r or small datasets. With higher dropout you can often afford slightly larger alpha or LR without instability.
+
+
+[Hyperparameters selection]
+rank=32
+alpha=64
+dropout=0.1
+batch_size=2
+learning_rate=0.0001",0.8091603053435115,0.306,111.51603053435116
+"rank=32, alpha=32, dropout=0.05, batch_size=4, learning_rate=0.0001","* **Rank (r):** Controls adapter capacity by setting the low-rank dimension—higher r increases expressivity (and memory/compute) but raises overfitting risk. If you raise r, consider stronger regularization or a slightly lower learning rate.
+* **Alpha (scaling):** Scales the LoRA update; the effective update magnitude is \~**alpha / r**, so setting alpha ≈ r keeps update strength stable. Larger alpha amplifies adaptation but can destabilize training if LR is high.
+* **Batch size:** Number of samples per optimizer step—larger batches give smoother gradients and typically permit a proportionally larger learning rate (linear-scaling rule) at the cost of more memory. Small batches may need gradient accumulation or a reduced LR.
+* **Learning rate:** Step size for adapter parameters—too high can diverge (especially with large alpha/r), too low slows convergence. Tune in conjunction with batch size and consider schedules (e.g., cosine) to balance speed and stability.
+* **Dropout (LoRA dropout):** Probability of dropping the adapter path to regularize training; higher dropout curbs overfitting, especially with large r or small datasets. With higher dropout you can often afford slightly larger alpha or LR without instability.
+
+
+[Hyperparameters selection]
+rank=32
+alpha=32
+dropout=0.05
+batch_size=4
+learning_rate=0.0001",0.816793893129771,0.296,111.27938931297707
+"rank=4, alpha=512, dropout=0.1, batch_size=2, learning_rate=3e-05","* **Rank (r):** Controls adapter capacity by setting the low-rank dimension—higher r increases expressivity (and memory/compute) but raises overfitting risk. If you raise r, consider stronger regularization or a slightly lower learning rate.
+* **Alpha (scaling):** Scales the LoRA update; the effective update magnitude is \~**alpha / r**, so setting alpha ≈ r keeps update strength stable. Larger alpha amplifies adaptation but can destabilize training if LR is high.
+* **Batch size:** Number of samples per optimizer step—larger batches give smoother gradients and typically permit a proportionally larger learning rate (linear-scaling rule) at the cost of more memory. Small batches may need gradient accumulation or a reduced LR.
+* **Learning rate:** Step size for adapter parameters—too high can diverge (especially with large alpha/r), too low slows convergence. Tune in conjunction with batch size and consider schedules (e.g., cosine) to balance speed and stability.
+* **Dropout (LoRA dropout):** Probability of dropping the adapter path to regularize training; higher dropout curbs overfitting, especially with large r or small datasets. With higher dropout you can often afford slightly larger alpha or LR without instability.
+
+
+[Hyperparameters selection]
+rank=4
+alpha=512
+dropout=0.1
+batch_size=2
+learning_rate=3e-05",0.8091603053435115,0.272,108.11603053435115
+"rank=1, alpha=2, dropout=0, batch_size=32, learning_rate=0.0001","* **Rank (r):** Controls adapter capacity by setting the low-rank dimension—higher r increases expressivity (and memory/compute) but raises overfitting risk. If you raise r, consider stronger regularization or a slightly lower learning rate.
+* **Alpha (scaling):** Scales the LoRA update; the effective update magnitude is \~**alpha / r**, so setting alpha ≈ r keeps update strength stable. Larger alpha amplifies adaptation but can destabilize training if LR is high.
+* **Batch size:** Number of samples per optimizer step—larger batches give smoother gradients and typically permit a proportionally larger learning rate (linear-scaling rule) at the cost of more memory. Small batches may need gradient accumulation or a reduced LR.
+* **Learning rate:** Step size for adapter parameters—too high can diverge (especially with large alpha/r), too low slows convergence. Tune in conjunction with batch size and consider schedules (e.g., cosine) to balance speed and stability.
+* **Dropout (LoRA dropout):** Probability of dropping the adapter path to regularize training; higher dropout curbs overfitting, especially with large r or small datasets. With higher dropout you can often afford slightly larger alpha or LR without instability.
+
+
+[Hyperparameters selection]
+rank=1
+alpha=2
+dropout=0
+batch_size=32
+learning_rate=0.0001",0.7938931297709924,0.286,107.98931297709925
+"rank=1, alpha=0.5, dropout=0, batch_size=2, learning_rate=5e-05","* **Rank (r):** Controls adapter capacity by setting the low-rank dimension—higher r increases expressivity (and memory/compute) but raises overfitting risk. If you raise r, consider stronger regularization or a slightly lower learning rate.
+* **Alpha (scaling):** Scales the LoRA update; the effective update magnitude is \~**alpha / r**, so setting alpha ≈ r keeps update strength stable. Larger alpha amplifies adaptation but can destabilize training if LR is high.
+* **Batch size:** Number of samples per optimizer step—larger batches give smoother gradients and typically permit a proportionally larger learning rate (linear-scaling rule) at the cost of more memory. Small batches may need gradient accumulation or a reduced LR.
+* **Learning rate:** Step size for adapter parameters—too high can diverge (especially with large alpha/r), too low slows convergence. Tune in conjunction with batch size and consider schedules (e.g., cosine) to balance speed and stability.
+* **Dropout (LoRA dropout):** Probability of dropping the adapter path to regularize training; higher dropout curbs overfitting, especially with large r or small datasets. With higher dropout you can often afford slightly larger alpha or LR without instability.
+
+
+[Hyperparameters selection]
+rank=1
+alpha=0.5
+dropout=0
+batch_size=2
+learning_rate=5e-05",0.0,0.0,0.0
+"rank=32, alpha=32, dropout=0.1, batch_size=2, learning_rate=5e-06","* **Rank (r):** Controls adapter capacity by setting the low-rank dimension—higher r increases expressivity (and memory/compute) but raises overfitting risk. If you raise r, consider stronger regularization or a slightly lower learning rate.
+* **Alpha (scaling):** Scales the LoRA update; the effective update magnitude is \~**alpha / r**, so setting alpha ≈ r keeps update strength stable. Larger alpha amplifies adaptation but can destabilize training if LR is high.
+* **Batch size:** Number of samples per optimizer step—larger batches give smoother gradients and typically permit a proportionally larger learning rate (linear-scaling rule) at the cost of more memory. Small batches may need gradient accumulation or a reduced LR.
+* **Learning rate:** Step size for adapter parameters—too high can diverge (especially with large alpha/r), too low slows convergence. Tune in conjunction with batch size and consider schedules (e.g., cosine) to balance speed and stability.
+* **Dropout (LoRA dropout):** Probability of dropping the adapter path to regularize training; higher dropout curbs overfitting, especially with large r or small datasets. With higher dropout you can often afford slightly larger alpha or LR without instability.
+
+
+[Hyperparameters selection]
+rank=32
+alpha=32
+dropout=0.1
+batch_size=2
+learning_rate=5e-06",0.8015267175572519,0.248,104.9526717557252
+"rank=4, alpha=8, dropout=0.05, batch_size=16, learning_rate=5e-05","* **Rank (r):** Controls adapter capacity by setting the low-rank dimension—higher r increases expressivity (and memory/compute) but raises overfitting risk. If you raise r, consider stronger regularization or a slightly lower learning rate.
+* **Alpha (scaling):** Scales the LoRA update; the effective update magnitude is \~**alpha / r**, so setting alpha ≈ r keeps update strength stable. Larger alpha amplifies adaptation but can destabilize training if LR is high.
+* **Batch size:** Number of samples per optimizer step—larger batches give smoother gradients and typically permit a proportionally larger learning rate (linear-scaling rule) at the cost of more memory. Small batches may need gradient accumulation or a reduced LR.
+* **Learning rate:** Step size for adapter parameters—too high can diverge (especially with large alpha/r), too low slows convergence. Tune in conjunction with batch size and consider schedules (e.g., cosine) to balance speed and stability.
+* **Dropout (LoRA dropout):** Probability of dropping the adapter path to regularize training; higher dropout curbs overfitting, especially with large r or small datasets. With higher dropout you can often afford slightly larger alpha or LR without instability.
+
+
+[Hyperparameters selection]
+rank=4
+alpha=8
+dropout=0.05
+batch_size=16
+learning_rate=5e-05",0.7938931297709924,0.278,107.18931297709923
+"rank=4, alpha=16, dropout=0.3, batch_size=64, learning_rate=0.0003","* **Rank (r):** Controls adapter capacity by setting the low-rank dimension—higher r increases expressivity (and memory/compute) but raises overfitting risk. If you raise r, consider stronger regularization or a slightly lower learning rate.
+* **Alpha (scaling):** Scales the LoRA update; the effective update magnitude is \~**alpha / r**, so setting alpha ≈ r keeps update strength stable. Larger alpha amplifies adaptation but can destabilize training if LR is high.
+* **Batch size:** Number of samples per optimizer step—larger batches give smoother gradients and typically permit a proportionally larger learning rate (linear-scaling rule) at the cost of more memory. Small batches may need gradient accumulation or a reduced LR.
+* **Learning rate:** Step size for adapter parameters—too high can diverge (especially with large alpha/r), too low slows convergence. Tune in conjunction with batch size and consider schedules (e.g., cosine) to balance speed and stability.
+* **Dropout (LoRA dropout):** Probability of dropping the adapter path to regularize training; higher dropout curbs overfitting, especially with large r or small datasets. With higher dropout you can often afford slightly larger alpha or LR without instability.
+
+
+[Hyperparameters selection]
+rank=4
+alpha=16
+dropout=0.3
+batch_size=64
+learning_rate=0.0003",0.7938931297709924,0.286,107.98931297709925
+"rank=32, alpha=64, dropout=0.2, batch_size=4, learning_rate=0.0001","* **Rank (r):** Controls adapter capacity by setting the low-rank dimension—higher r increases expressivity (and memory/compute) but raises overfitting risk. If you raise r, consider stronger regularization or a slightly lower learning rate.
+* **Alpha (scaling):** Scales the LoRA update; the effective update magnitude is \~**alpha / r**, so setting alpha ≈ r keeps update strength stable. Larger alpha amplifies adaptation but can destabilize training if LR is high.
+* **Batch size:** Number of samples per optimizer step—larger batches give smoother gradients and typically permit a proportionally larger learning rate (linear-scaling rule) at the cost of more memory. Small batches may need gradient accumulation or a reduced LR.
+* **Learning rate:** Step size for adapter parameters—too high can diverge (especially with large alpha/r), too low slows convergence. Tune in conjunction with batch size and consider schedules (e.g., cosine) to balance speed and stability.
+* **Dropout (LoRA dropout):** Probability of dropping the adapter path to regularize training; higher dropout curbs overfitting, especially with large r or small datasets. With higher dropout you can often afford slightly larger alpha or LR without instability.
+
+
+[Hyperparameters selection]
+rank=32
+alpha=64
+dropout=0.2
+batch_size=4
+learning_rate=0.0001",0.7786259541984732,0.312,109.06259541984733
+"rank=8, alpha=8, dropout=0.05, batch_size=16, learning_rate=0.0005","* **Rank (r):** Controls adapter capacity by setting the low-rank dimension—higher r increases expressivity (and memory/compute) but raises overfitting risk. If you raise r, consider stronger regularization or a slightly lower learning rate.
+* **Alpha (scaling):** Scales the LoRA update; the effective update magnitude is \~**alpha / r**, so setting alpha ≈ r keeps update strength stable. Larger alpha amplifies adaptation but can destabilize training if LR is high.
+* **Batch size:** Number of samples per optimizer step—larger batches give smoother gradients and typically permit a proportionally larger learning rate (linear-scaling rule) at the cost of more memory. Small batches may need gradient accumulation or a reduced LR.
+* **Learning rate:** Step size for adapter parameters—too high can diverge (especially with large alpha/r), too low slows convergence. Tune in conjunction with batch size and consider schedules (e.g., cosine) to balance speed and stability.
+* **Dropout (LoRA dropout):** Probability of dropping the adapter path to regularize training; higher dropout curbs overfitting, especially with large r or small datasets. With higher dropout you can often afford slightly larger alpha or LR without instability.
+
+
+[Hyperparameters selection]
+rank=8
+alpha=8
+dropout=0.05
+batch_size=16
+learning_rate=0.0005",0.816793893129771,0.29,110.6793893129771
+"rank=4, alpha=4, dropout=0.2, batch_size=128, learning_rate=0.0004","* **Rank (r):** Controls adapter capacity by setting the low-rank dimension—higher r increases expressivity (and memory/compute) but raises overfitting risk. If you raise r, consider stronger regularization or a slightly lower learning rate.
+* **Alpha (scaling):** Scales the LoRA update; the effective update magnitude is \~**alpha / r**, so setting alpha ≈ r keeps update strength stable. Larger alpha amplifies adaptation but can destabilize training if LR is high.
+* **Batch size:** Number of samples per optimizer step—larger batches give smoother gradients and typically permit a proportionally larger learning rate (linear-scaling rule) at the cost of more memory. Small batches may need gradient accumulation or a reduced LR.
+* **Learning rate:** Step size for adapter parameters—too high can diverge (especially with large alpha/r), too low slows convergence. Tune in conjunction with batch size and consider schedules (e.g., cosine) to balance speed and stability.
+* **Dropout (LoRA dropout):** Probability of dropping the adapter path to regularize training; higher dropout curbs overfitting, especially with large r or small datasets. With higher dropout you can often afford slightly larger alpha or LR without instability.
+
+
+[Hyperparameters selection]
+rank=4
+alpha=4
+dropout=0.2
+batch_size=128
+learning_rate=0.0004",0.7786259541984732,0.292,107.06259541984733
+"rank=8, alpha=512, dropout=0.2, batch_size=2, learning_rate=0.0001","* **Rank (r):** Controls adapter capacity by setting the low-rank dimension—higher r increases expressivity (and memory/compute) but raises overfitting risk. If you raise r, consider stronger regularization or a slightly lower learning rate.
+* **Alpha (scaling):** Scales the LoRA update; the effective update magnitude is \~**alpha / r**, so setting alpha ≈ r keeps update strength stable. Larger alpha amplifies adaptation but can destabilize training if LR is high.
+* **Batch size:** Number of samples per optimizer step—larger batches give smoother gradients and typically permit a proportionally larger learning rate (linear-scaling rule) at the cost of more memory. Small batches may need gradient accumulation or a reduced LR.
+* **Learning rate:** Step size for adapter parameters—too high can diverge (especially with large alpha/r), too low slows convergence. Tune in conjunction with batch size and consider schedules (e.g., cosine) to balance speed and stability.
+* **Dropout (LoRA dropout):** Probability of dropping the adapter path to regularize training; higher dropout curbs overfitting, especially with large r or small datasets. With higher dropout you can often afford slightly larger alpha or LR without instability.
+
+
+[Hyperparameters selection]
+rank=8
+alpha=512
+dropout=0.2
+batch_size=2
+learning_rate=0.0001",0.732824427480916,0.212,94.4824427480916
+"rank=4, alpha=32, dropout=0, batch_size=16, learning_rate=0.0005","* **Rank (r):** Controls adapter capacity by setting the low-rank dimension—higher r increases expressivity (and memory/compute) but raises overfitting risk. If you raise r, consider stronger regularization or a slightly lower learning rate.
+* **Alpha (scaling):** Scales the LoRA update; the effective update magnitude is \~**alpha / r**, so setting alpha ≈ r keeps update strength stable. Larger alpha amplifies adaptation but can destabilize training if LR is high.
+* **Batch size:** Number of samples per optimizer step—larger batches give smoother gradients and typically permit a proportionally larger learning rate (linear-scaling rule) at the cost of more memory. Small batches may need gradient accumulation or a reduced LR.
+* **Learning rate:** Step size for adapter parameters—too high can diverge (especially with large alpha/r), too low slows convergence. Tune in conjunction with batch size and consider schedules (e.g., cosine) to balance speed and stability.
+* **Dropout (LoRA dropout):** Probability of dropping the adapter path to regularize training; higher dropout curbs overfitting, especially with large r or small datasets. With higher dropout you can often afford slightly larger alpha or LR without instability.
+
+
+[Hyperparameters selection]
+rank=4
+alpha=32
+dropout=0
+batch_size=16
+learning_rate=0.0005",0.8244274809160306,0.28,110.44274809160306
+"rank=2, alpha=4, dropout=0.15, batch_size=32, learning_rate=0.0001","* **Rank (r):** Controls adapter capacity by setting the low-rank dimension—higher r increases expressivity (and memory/compute) but raises overfitting risk. If you raise r, consider stronger regularization or a slightly lower learning rate.
+* **Alpha (scaling):** Scales the LoRA update; the effective update magnitude is \~**alpha / r**, so setting alpha ≈ r keeps update strength stable. Larger alpha amplifies adaptation but can destabilize training if LR is high.
+* **Batch size:** Number of samples per optimizer step—larger batches give smoother gradients and typically permit a proportionally larger learning rate (linear-scaling rule) at the cost of more memory. Small batches may need gradient accumulation or a reduced LR.
+* **Learning rate:** Step size for adapter parameters—too high can diverge (especially with large alpha/r), too low slows convergence. Tune in conjunction with batch size and consider schedules (e.g., cosine) to balance speed and stability.
+* **Dropout (LoRA dropout):** Probability of dropping the adapter path to regularize training; higher dropout curbs overfitting, especially with large r or small datasets. With higher dropout you can often afford slightly larger alpha or LR without instability.
+
+
+[Hyperparameters selection]
+rank=2
+alpha=4
+dropout=0.15
+batch_size=32
+learning_rate=0.0001",0.8015267175572519,0.274,107.5526717557252
+"rank=32, alpha=16.0, dropout=0.05, batch_size=64, learning_rate=0.0001","* **Rank (r):** Controls adapter capacity by setting the low-rank dimension—higher r increases expressivity (and memory/compute) but raises overfitting risk. If you raise r, consider stronger regularization or a slightly lower learning rate.
+* **Alpha (scaling):** Scales the LoRA update; the effective update magnitude is \~**alpha / r**, so setting alpha ≈ r keeps update strength stable. Larger alpha amplifies adaptation but can destabilize training if LR is high.
+* **Batch size:** Number of samples per optimizer step—larger batches give smoother gradients and typically permit a proportionally larger learning rate (linear-scaling rule) at the cost of more memory. Small batches may need gradient accumulation or a reduced LR.
+* **Learning rate:** Step size for adapter parameters—too high can diverge (especially with large alpha/r), too low slows convergence. Tune in conjunction with batch size and consider schedules (e.g., cosine) to balance speed and stability.
+* **Dropout (LoRA dropout):** Probability of dropping the adapter path to regularize training; higher dropout curbs overfitting, especially with large r or small datasets. With higher dropout you can often afford slightly larger alpha or LR without instability.
+
+
+[Hyperparameters selection]
+rank=32
+alpha=16.0
+dropout=0.05
+batch_size=64
+learning_rate=0.0001",0.7862595419847328,0.27,105.6259541984733
+"rank=32, alpha=128, dropout=0, batch_size=4, learning_rate=0.0001","* **Rank (r):** Controls adapter capacity by setting the low-rank dimension—higher r increases expressivity (and memory/compute) but raises overfitting risk. If you raise r, consider stronger regularization or a slightly lower learning rate.
+* **Alpha (scaling):** Scales the LoRA update; the effective update magnitude is \~**alpha / r**, so setting alpha ≈ r keeps update strength stable. Larger alpha amplifies adaptation but can destabilize training if LR is high.
+* **Batch size:** Number of samples per optimizer step—larger batches give smoother gradients and typically permit a proportionally larger learning rate (linear-scaling rule) at the cost of more memory. Small batches may need gradient accumulation or a reduced LR.
+* **Learning rate:** Step size for adapter parameters—too high can diverge (especially with large alpha/r), too low slows convergence. Tune in conjunction with batch size and consider schedules (e.g., cosine) to balance speed and stability.
+* **Dropout (LoRA dropout):** Probability of dropping the adapter path to regularize training; higher dropout curbs overfitting, especially with large r or small datasets. With higher dropout you can often afford slightly larger alpha or LR without instability.
+
+
+[Hyperparameters selection]
+rank=32
+alpha=128
+dropout=0
+batch_size=4
+learning_rate=0.0001",0.8091603053435115,0.286,109.51603053435116
+"rank=64, alpha=64, dropout=0.1, batch_size=16, learning_rate=0.0001","* **Rank (r):** Controls adapter capacity by setting the low-rank dimension—higher r increases expressivity (and memory/compute) but raises overfitting risk. If you raise r, consider stronger regularization or a slightly lower learning rate.
+* **Alpha (scaling):** Scales the LoRA update; the effective update magnitude is \~**alpha / r**, so setting alpha ≈ r keeps update strength stable. Larger alpha amplifies adaptation but can destabilize training if LR is high.
+* **Batch size:** Number of samples per optimizer step—larger batches give smoother gradients and typically permit a proportionally larger learning rate (linear-scaling rule) at the cost of more memory. Small batches may need gradient accumulation or a reduced LR.
+* **Learning rate:** Step size for adapter parameters—too high can diverge (especially with large alpha/r), too low slows convergence. Tune in conjunction with batch size and consider schedules (e.g., cosine) to balance speed and stability.
+* **Dropout (LoRA dropout):** Probability of dropping the adapter path to regularize training; higher dropout curbs overfitting, especially with large r or small datasets. With higher dropout you can often afford slightly larger alpha or LR without instability.
+
+
+[Hyperparameters selection]
+rank=64
+alpha=64
+dropout=0.1
+batch_size=16
+learning_rate=0.0001",0.816793893129771,0.282,109.8793893129771
+"rank=128, alpha=128, dropout=0.15, batch_size=128, learning_rate=0.0001","* **Rank (r):** Controls adapter capacity by setting the low-rank dimension—higher r increases expressivity (and memory/compute) but raises overfitting risk. If you raise r, consider stronger regularization or a slightly lower learning rate.
+* **Alpha (scaling):** Scales the LoRA update; the effective update magnitude is \~**alpha / r**, so setting alpha ≈ r keeps update strength stable. Larger alpha amplifies adaptation but can destabilize training if LR is high.
+* **Batch size:** Number of samples per optimizer step—larger batches give smoother gradients and typically permit a proportionally larger learning rate (linear-scaling rule) at the cost of more memory. Small batches may need gradient accumulation or a reduced LR.
+* **Learning rate:** Step size for adapter parameters—too high can diverge (especially with large alpha/r), too low slows convergence. Tune in conjunction with batch size and consider schedules (e.g., cosine) to balance speed and stability.
+* **Dropout (LoRA dropout):** Probability of dropping the adapter path to regularize training; higher dropout curbs overfitting, especially with large r or small datasets. With higher dropout you can often afford slightly larger alpha or LR without instability.
+
+
+[Hyperparameters selection]
+rank=128
+alpha=128
+dropout=0.15
+batch_size=128
+learning_rate=0.0001",0.3053435114503817,0.018,32.33435114503817
+"rank=32, alpha=32, dropout=0, batch_size=64, learning_rate=5e-05","* **Rank (r):** Controls adapter capacity by setting the low-rank dimension—higher r increases expressivity (and memory/compute) but raises overfitting risk. If you raise r, consider stronger regularization or a slightly lower learning rate.
+* **Alpha (scaling):** Scales the LoRA update; the effective update magnitude is \~**alpha / r**, so setting alpha ≈ r keeps update strength stable. Larger alpha amplifies adaptation but can destabilize training if LR is high.
+* **Batch size:** Number of samples per optimizer step—larger batches give smoother gradients and typically permit a proportionally larger learning rate (linear-scaling rule) at the cost of more memory. Small batches may need gradient accumulation or a reduced LR.
+* **Learning rate:** Step size for adapter parameters—too high can diverge (especially with large alpha/r), too low slows convergence. Tune in conjunction with batch size and consider schedules (e.g., cosine) to balance speed and stability.
+* **Dropout (LoRA dropout):** Probability of dropping the adapter path to regularize training; higher dropout curbs overfitting, especially with large r or small datasets. With higher dropout you can often afford slightly larger alpha or LR without instability.
+
+
+[Hyperparameters selection]
+rank=32
+alpha=32
+dropout=0
+batch_size=64
+learning_rate=5e-05",0.1984732824427481,0.02,21.84732824427481

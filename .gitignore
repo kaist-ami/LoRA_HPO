@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+*.egg-info/
+wandb/
+results/
+PiSSA/output/
+PiSSA/output*/
+PiSSA/pissa-dataset/*/train.json
+data/*.csv
